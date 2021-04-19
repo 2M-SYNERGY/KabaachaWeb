@@ -357,7 +357,7 @@
                         @php
                             $category_ids = \App\Utility\CategoryUtility::children_ids($category->id);
                             $category_ids[] = $category->id;
-                            
+
                             $products = \App\Product::whereIn('category_id', $category_ids)->get();
                             $qty = 0;
                             foreach ($products as $key => $product) {
